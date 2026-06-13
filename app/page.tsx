@@ -13,13 +13,15 @@ import { Programs } from "@/components/programs";
 import { Schedule } from "@/components/schedule";
 import { Testimonials } from "@/components/testimonials";
 import { Trainers } from "@/components/trainers";
+import { site } from "@/lib/content";
+import { hasPublicAsset } from "@/lib/media";
 
 export default function Home() {
   return (
     <>
       <Header />
       <main>
-        <Hero />
+        <Hero hasPoster={hasPublicAsset(site.heroPoster)} />
         <About />
         <Programs />
         <Schedule />

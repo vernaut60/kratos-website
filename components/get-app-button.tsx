@@ -11,12 +11,13 @@ type GetAppButtonProps = {
 
 const variantStyles = {
   primary:
-    "bg-accent px-8 py-3.5 text-[13px] font-semibold tracking-wide text-background transition-opacity hover:opacity-90",
+    "bg-accent px-9 py-4 text-[12px] font-bold uppercase tracking-[0.12em] text-background transition-transform hover:-translate-y-0.5 hover:opacity-95",
   outline:
-    "border border-accent/50 px-5 py-2 text-[13px] font-medium text-accent transition-colors hover:bg-accent hover:text-background",
-  mobile: "mt-2 w-fit border border-accent px-6 py-3 text-sm font-medium text-accent",
+    "border border-accent/50 px-5 py-2 text-[12px] font-bold uppercase tracking-[0.1em] text-accent transition-colors hover:bg-accent hover:text-background",
+  mobile:
+    "mt-2 w-fit border border-accent px-6 py-3 text-sm font-bold uppercase tracking-[0.1em] text-accent",
   ghost:
-    "border border-line px-8 py-3.5 text-[13px] font-medium tracking-wide text-foreground transition-colors hover:border-accent hover:text-accent",
+    "border border-line px-9 py-4 text-[12px] font-bold uppercase tracking-[0.12em] text-foreground transition-colors hover:border-accent hover:text-accent",
 } as const;
 
 export function GetAppButton({

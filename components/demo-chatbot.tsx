@@ -12,7 +12,7 @@ import {
 import { site } from "@/lib/content";
 
 export function DemoChatbot() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
   const [typing, setTyping] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([

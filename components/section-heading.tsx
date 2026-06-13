@@ -19,11 +19,11 @@ export function SectionHeading({
     <div
       className={`max-w-2xl ${align === "center" ? "mx-auto text-center" : ""} ${className}`}
     >
-      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+      <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-accent">
         {label}
       </p>
       <h2
-        className={`font-display mt-4 text-4xl font-semibold leading-[1.08] tracking-tight text-balance md:text-5xl ${
+        className={`font-display mt-4 text-4xl font-extrabold italic leading-[1.0] tracking-[-0.02em] text-balance md:text-5xl ${
           lowercase ? "normal-case" : ""
         }`}
       >
