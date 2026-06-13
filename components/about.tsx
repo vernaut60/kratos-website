@@ -1,19 +1,32 @@
+"use client";
+
+import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRef } from "react";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { about } from "@/lib/content";
 
 export function About() {
+  const reduce = useReducedMotion();
+  const imageWrapRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: imageWrapRef,
+    offset: ["start end", "end start"],
+  });
+  // Subtle vertical drift so the image moves slower than the surrounding text.
+  const parallaxY = useTransform(scrollYProgress, [0, 1], ["-6%", "6%"]);
+
   return (
     <section id="about" className="py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-20">
+        <div className="grid items-start gap-16 lg:grid-cols-2 lg:gap-20">
           <ScrollReveal>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
               {about.label}
             </p>
             <p className="mt-4 text-sm font-medium text-muted">{about.subtitle}</p>
-            <h2 className="font-display mt-3 text-4xl font-semibold leading-[1.08] tracking-tight text-balance md:text-5xl">
+            <h2 className="font-display mt-3 text-4xl font-extrabold italic leading-[1.0] tracking-[-0.02em] text-balance md:text-5xl">
               {about.editorialTitle}
             </h2>
             <p className="mt-3 text-sm text-accent">{about.tagline}</p>
@@ -72,15 +85,23 @@ export function About() {
             </div>
           </ScrollReveal>
 
-          <ScrollReveal delay={0.1}>
-            <div className="relative aspect-[4/5] overflow-hidden rounded-3xl">
-              <Image
-                src={about.image}
-                alt="Athletes training at Kratos Calisthenics Arena"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
+          <ScrollReveal delay={0.1} className="lg:sticky lg:top-24">
+            <div
+              ref={imageWrapRef}
+              className="relative aspect-[4/5] overflow-hidden rounded-3xl"
+            >
+              <motion.div
+                className="absolute inset-0 scale-110"
+                style={reduce ? undefined : { y: parallaxY }}
+              >
+                <Image
+                  src={about.image}
+                  alt="Athletes training at Kratos Calisthenics Arena"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </motion.div>
             </div>
           </ScrollReveal>
         </div>

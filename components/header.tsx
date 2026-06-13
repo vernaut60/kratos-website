@@ -15,7 +15,7 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:h-20 lg:px-10">
         <Link href="/" className="flex min-w-0 shrink items-center gap-3">
           <SiteLogo priority className="h-9 w-auto shrink-0 object-contain lg:h-10" />
-          <span className="font-display text-sm font-semibold leading-tight tracking-tight sm:text-base">
+          <span className="font-display text-sm font-extrabold italic leading-tight tracking-tight sm:text-base">
             {site.name}
           </span>
         </Link>

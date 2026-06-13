@@ -2,7 +2,7 @@ export const site = {
   name: "Kratos Calisthenics Arena",
   shortName: "KCA",
   tagline: "Hyderabad's premier bodyweight training hub",
-  bannerMessage: "Achieve Balance in Mind, Body & Soul",
+  bannerMessage: "No Machines. No Shortcuts. Just You.",
   phone: "9534388999",
   phoneHref: "tel:9534388999",
   whatsappHref: "https://wa.me/919534388999",
@@ -12,6 +12,7 @@ export const site = {
   logo: "/kca-logo.png",
   heroVideo:
     "https://jekmupbkimxtsqgdwamt.supabase.co/storage/v1/object/public/media/1751308772835-tqdu0h35vr.mp4",
+  heroPoster: "/images/hero-poster.jpg",
   aboutImage:
     "https://jekmupbkimxtsqgdwamt.supabase.co/storage/v1/object/public/media/1776838702521-2zejpo32zzg.png",
   googleMapsUrl: "https://maps.app.goo.gl/PQj4nn11pENr6fY4A",
@@ -42,9 +43,9 @@ export const navLinks = [
 export const sections = {
   programs: {
     label: "Our programs",
-    title: "Training designed for real progress",
+    title: "Pick your path. Show up. Get stronger.",
     description:
-      "Kids gymnastics, combo classes, group calisthenics, self training, day passes, and personal coaching at Kondapur.",
+      "Kids gymnastics, combo classes, group calisthenics, self training, day passes, and personal coaching — all on one floor in Kondapur.",
   },
   schedule: {
     label: "Schedule",
@@ -53,8 +54,8 @@ export const sections = {
   },
   trainers: {
     label: "Our trainers",
-    title: "Meet the coaches who support you",
-    description: "The coaches on the floor across strength sessions, gymnastics, and athlete batches.",
+    title: "The coaches who'll push you further",
+    description: "On the floor every session — strength, gymnastics, and athlete batches, coached by people who've put in the reps.",
   },
   pricing: {
     label: "Membership plan",
@@ -67,10 +68,10 @@ export const sections = {
     description: "Members who stayed consistent, built skills, and found a community that pushes them forward.",
   },
   instagram: {
-    label: "Instagram",
-    title: "Latest from KCA",
+    label: "Spotted on the floor",
+    title: "Tag us to be featured",
     description:
-      "Reels and posts from our floor. Follow us for workshops, training clips, and member highlights.",
+      "Reels and clips from the KCA floor — tag @kratoscaliarena and you might end up here.",
   },
   blog: {
     label: "Our blog",
@@ -90,22 +91,21 @@ export const sections = {
 } as const;
 
 export const hero = {
-  eyebrow: "Welcome",
-  title: "Kratos Calisthenics Arena",
+  eyebrow: "Calisthenics Arena",
+  title: "Strength is earned here.",
   subtext:
-    "A coaching-led calisthenics arena in Kondapur offering group sessions, open floor training, and personal coaching for people who want accountability, skill progress, and results.",
+    "Coached calisthenics, gymnastics, and strength training for every level. Group sessions, open floor access, and 1-on-1 coaching at Hyderabad's home for bodyweight athletes.",
   location: "Kondapur, Hyderabad",
 } as const;
 
 export const about = {
   label: "About us",
-  editorialTitle:
-    "strength is building confidence, discipline, and lifelong health.",
+  editorialTitle: "we build athletes, not just bodies.",
   subtitle: "Why Choose KCA?",
-  tagline: "Your Journey to Wellness Starts Here.",
-  lead: "Unleash your inner warrior at Kratos Calisthenics Arena.",
+  tagline: "Your journey to real strength starts on this floor.",
+  lead: "No machines. No shortcuts. Just you, the bar, and a coach who's done the work.",
   description:
-    "Step into Hyderabad's premier bodyweight training hub, where strength meets discipline. We blend modern calisthenics with warrior-style conditioning to build agility, power, and mental resilience. Whether you're a beginner or a pro, our coaches and community will push you to become your strongest self. No machines, just pure movement.",
+    "Kratos Calisthenics Arena is Hyderabad's premier bodyweight training hub. We blend modern calisthenics with warrior-style conditioning to build agility, power, and mental resilience — for total beginners and seasoned athletes alike. Show up, get coached, get stronger.",
   stats: [
     { value: "8+", label: "Years coaching calisthenics in Hyderabad." },
     { value: "12+", label: "Expert trainers on the floor every week." },
@@ -125,69 +125,69 @@ export const programs = [
   {
     tag: "Kids",
     title: "Kids Gymnastics",
-    description: "Flexibility, gymnastics, and parkour for ages 4+.",
+    description: "Build flexibility, confidence, and coordination — for ages 4+.",
     priceFrom: "₹5,000",
     period: "/month",
     categoryId: "kids",
-    image: site.aboutImage,
+    image: "/images/programs/kids-gymnastics.jpg",
   },
   {
     tag: "Combo",
     title: "Combo Classes",
-    description: "Calisthenics and gymnastics combined. 5 group classes per week.",
+    description: "Calisthenics meets gymnastics. 5 coached sessions a week.",
     priceFrom: "₹8,500",
     period: "/month",
     categoryId: "combo",
-    image: site.aboutImage,
+    image: "/images/programs/combo-classes.jpg",
   },
   {
     tag: "Group",
     title: "Group Calisthenics",
-    description: "Coached strength sessions from 3 to 5 days per week.",
+    description: "Coached strength training, 3–5 days a week. Built for progress.",
     priceFrom: "₹4,000",
     period: "/month",
     categoryId: "group",
-    image: site.aboutImage,
+    image: "/images/programs/group-calisthenics.jpg",
   },
   {
     tag: "Self",
     title: "Self Training",
-    description: "Open floor access for independent training on your schedule.",
+    description: "Open floor access. Train on your own time, your own pace.",
     priceFrom: "₹3,000",
     period: "/month",
     categoryId: "self",
-    image: site.aboutImage,
+    image: "/images/programs/self-training.jpg",
   },
   {
     tag: "Pass",
     title: "Day Pass",
-    description: "Full gym access for a single day. Try the floor before you commit.",
+    description: "Full floor access for a day. Come try before you commit.",
     priceFrom: "₹750",
     period: "/day",
     categoryId: "pass",
-    image: site.aboutImage,
+    image: "/images/programs/day-pass.jpg",
   },
   {
     tag: "1-on-1",
     title: "Personal Training",
-    description: "One-on-one coaching for muscle-ups, handstands, and strength goals.",
+    description: "1-on-1 coaching toward muscle-ups, handstands, and real strength goals.",
     priceFrom: "Enquire",
     period: "",
     categoryId: "personal",
-    image: site.aboutImage,
+    image: "/images/programs/personal-training.jpg",
   },
 ] as const;
 
 export const trainers = [
-  { name: "Jaloo", role: "Head Coach", focus: "Strength sessions · Tue & Wed AM" },
-  { name: "Sourav", role: "Strength Coach", focus: "Early morning batches" },
-  { name: "Sandeep", role: "Calisthenics Coach", focus: "Evening strength sessions" },
-  { name: "Tony", role: "Gymnastics Coach", focus: "Kids & adults gymnastics" },
-  { name: "Aman", role: "Athlete Batch Coach", focus: "Advanced athlete batch" },
-  { name: "Pallavi", role: "Weekend Coach", focus: "Saturday calisthenics" },
-  { name: "Shekar", role: "Kids Gymnastics", focus: "Kids evening batches" },
-  { name: "Hassy", role: "Strength Coach", focus: "Monday morning sessions" },
-  { name: "Ara", role: "Evening Sessions", focus: "PM strength coaching" },
+  { name: "Jaloo", role: "Head Coach", focus: "Strength sessions · Tue & Wed AM", image: "/images/trainers/jaloo.jpg" },
+  { name: "Sourav", role: "Strength Coach", focus: "Early morning batches", image: "/images/trainers/sourav.jpg" },
+  { name: "Sandeep", role: "Calisthenics Coach", focus: "Evening strength sessions", image: "/images/trainers/sandeep.jpg" },
+  { name: "Tony", role: "Gymnastics Coach", focus: "Kids & adults gymnastics", image: "/images/trainers/tony.jpg" },
+  { name: "Aman", role: "Athlete Batch Coach", focus: "Advanced athlete batch", image: "/images/trainers/aman.jpg" },
+  { name: "Pallavi", role: "Weekend Coach", focus: "Saturday calisthenics", image: "/images/trainers/pallavi.jpg" },
+  { name: "Shekar", role: "Kids Gymnastics", focus: "Kids evening batches", image: "/images/trainers/shekar.jpg" },
+  { name: "Hassy", role: "Strength Coach", focus: "Monday morning sessions", image: "/images/trainers/hassy.jpg" },
+  { name: "Ara", role: "Evening Sessions", focus: "PM strength coaching", image: "/images/trainers/ara.jpg" },
 ] as const;
 
 export type Plan = {

@@ -1,6 +1,8 @@
 export type InstagramPost = {
   url: string;
   caption: string;
+  thumbnail?: string;
+  video?: string;
 };
 
 const INSTAGRAM_APP_ID = "936619743392459";
@@ -38,6 +40,9 @@ export async function fetchRecentInstagramPosts(
           "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
         "X-IG-App-ID": INSTAGRAM_APP_ID,
         "X-Requested-With": "XMLHttpRequest",
+        Accept: "*/*",
+        "Accept-Language": "en-US,en;q=0.9",
+        Referer: `https://www.instagram.com/${username}/`,
       },
       next: { revalidate: 3600 },
     },
@@ -56,6 +61,9 @@ export async function fetchRecentInstagramPosts(
               shortcode: string;
               is_video?: boolean;
               product_type?: string;
+              display_url?: string;
+              thumbnail_src?: string;
+              video_url?: string;
               edge_media_to_caption?: {
                 edges?: Array<{ node: { text: string } }>;
               };
@@ -76,6 +84,8 @@ export async function fetchRecentInstagramPosts(
     return {
       url: `https://www.instagram.com/${type}/${node.shortcode}/`,
       caption,
+      thumbnail: node.thumbnail_src ?? node.display_url,
+      video: node.video_url,
     };
   });
 }
